@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Root & Render Studio transforms forgotten furniture into one-of-one functional art.">
+  <title>Root & Render Studio Furniture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Root & Render <span>Objects</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#workshop">Workshop</a>
+      <a href="#archive">Archive</a>
+      <a href="#commissions">Commissions</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Forgotten furniture. Rewritten by hand.</p>
+        <h1>Objects deserve another story.</h1>
+        <p class="hero-intro">One-of-one functional art inspired by shorelines, forests, weather, memory, and the beautiful lives hidden beneath old finishes.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="#archive">Explore the archive</a>
+          <a class="button button-ghost" href="#workshop">Enter the workshop</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Atmospheric abstract representation of sea, wood and aurora colours">
+        <div class="hero-orb"></div>
+        <p id="workshop-count">The archive is just beginning.</p>
+      </div>
+    </section>
+
+    <section id="workshop" class="section-shell section-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Currently awakening</p>
+          <h2>Inside the workshop</h2>
+        </div>
+        <p>Follow each rescue from its first worn edge to its final, luminous form.</p>
+      </div>
+      <div id="workshop-grid" class="piece-grid"></div>
+    </section>
+
+    <section class="feature-band">
+      <div class="section-shell">
+        <p class="eyebrow">The process</p>
+        <h2>Rescue. Repair. Reimagine. Return.</h2>
+        <div class="process-grid">
+          <article><span>01</span><h3>Found</h3><p>A cast-off piece arrives with all its scars and possibilities intact.</p></article>
+          <article><span>02</span><h3>Restored</h3><p>Loose joints, rough surfaces, and tired hardware are made sound again.</p></article>
+          <article><span>03</span><h3>Transformed</h3><p>Layered colour, texture, grain, and restraint create a singular finish.</p></article>
+          <article><span>04</span><h3>Rehomed</h3><p>The object leaves the workshop ready to begin another chapter.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="section-shell section-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">One of one</p>
+          <h2>The transformation archive</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter furniture">
+          <button class="filter-button is-active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="available">Available</button>
+          <button class="filter-button" data-filter="in-workshop">In workshop</button>
+          <button class="filter-button" data-filter="found-a-home">Found a home</button>
+        </div>
+      </div>
+      <div id="archive-grid" class="piece-grid"></div>
+    </section>
+
+    <section id="commissions" class="commission-section">
+      <div class="section-shell commission-layout">
+        <div>
+          <p class="eyebrow">A piece of your own</p>
+          <h2>Commission a transformation</h2>
+          <p>Bring an existing piece, or ask the studio to help source one. Choose a signature atmosphere, then let the object keep enough mystery to become itself.</p>
+          <div class="finish-list" id="finish-list"></div>
+        </div>
+        <form name="commission" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="studio-form">
+          <input type="hidden" name="form-name" value="commission">
+          <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+          <label>Name<input name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Location<input name="location" placeholder="Town or region"></label>
+          <label>Furniture type<input name="furniture-type" placeholder="Dresser, table, cabinet..."></label>
+          <label>Budget range<select name="budget"><option value="">Choose one</option><option>$250–$500</option><option>$500–$900</option><option>$900+</option></select></label>
+          <label>Tell me about the piece<textarea name="message" rows="5" required></textarea></label>
+          <button class="button button-primary" type="submit">Begin the conversation</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-shell about-section">
+      <p class="eyebrow">About the studio</p>
+      <h2>Built slowly, with wonder.</h2>
+      <p>Root & Render Studio rescues overlooked furniture and turns it into functional art shaped by landscape, weather, colour, and memory. Every piece remains one of one.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <p>© <span id="year"></span> Root & Render Studio</p>
+      <p>Made in Ontario, one forgotten object at a time.</p>
+    </div>
+  </footer>
+
+  <dialog id="piece-dialog" class="piece-dialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <dialog id="reserve-dialog" class="piece-dialog small-dialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <h2>Reserve this piece</h2>
+    <form name="reservation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="studio-form">
+      <input type="hidden" name="form-name" value="reservation">
+      <input type="hidden" id="reservation-piece" name="piece">
+      <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <label>Name<input name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Phone<input name="phone"></label>
+      <label>Pickup or delivery notes<textarea name="message" rows="4"></textarea></label>
+      <button class="button button-primary" type="submit">Request reservation</button>
+    </form>
+  </dialog>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
