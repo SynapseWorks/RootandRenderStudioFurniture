@@ -6,9 +6,9 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: "https://YOUR-NETLIFY-SITE.netlify.app"
-display_url: "https://YOUR-NETLIFY-SITE.netlify.app"
-logo_url: "https://YOUR-NETLIFY-SITE.netlify.app/favicon.svg"
+site_url: "https://rootandrenderstudiofurniture.netlify.app"
+display_url: "https://rootandrenderstudiofurniture.netlify.app"
+logo_url: "https://rootandrenderstudiofurniture.netlify.app/favicon.svg"
 
 collections:
   - name: "collection"
