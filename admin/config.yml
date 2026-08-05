@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: SynapseWorks/RootandRenderStudioFurniture
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: "https://YOUR-NETLIFY-SITE.netlify.app"
+display_url: "https://YOUR-NETLIFY-SITE.netlify.app"
+logo_url: "https://YOUR-NETLIFY-SITE.netlify.app/favicon.svg"
+
+collections:
+  - name: "collection"
+    label: "Furniture Collection"
+    files:
+      - name: "pieces"
+        label: "Furniture Pieces"
+        file: "data/pieces.json"
+        fields:
+          - label: "Pieces"
+            name: "pieces"
+            widget: "list"
+            summary: "{{fields.id}} — {{fields.title}} ({{fields.statusLabel}})"
+            fields:
+              - { label: "Piece number", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Theme", name: "theme", widget: "string" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Planned", value: "planned" }
+                  - { label: "In the workshop", value: "in-workshop" }
+                  - { label: "Available", value: "available" }
+                  - { label: "Reserved", value: "reserved" }
+                  - { label: "Found a home", value: "found-a-home" }
+              - { label: "Status label", name: "statusLabel", widget: "string" }
+              - { label: "Price CAD", name: "price", widget: "number", value_type: "int", required: false }
+              - { label: "Progress percent", name: "progress", widget: "number", value_type: "int", min: 0, max: 100, default: 0 }
+              - { label: "Card summary", name: "summary", widget: "text" }
+              - { label: "Full story", name: "story", widget: "text" }
+              - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+              - { label: "Materials", name: "materials", widget: "text", required: false }
+              - { label: "Main image", name: "image", widget: "image", required: false }
+              - label: "Placeholder colour"
+                name: "imageClass"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Ocean", value: "placeholder-ocean" }
+                  - { label: "Aurora", value: "placeholder-aurora" }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
