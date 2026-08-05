@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Root & Render Studio transforms forgotten furniture into one-of-one functional art.">
+  <meta name="theme-color" content="#161816">
   <title>Root & Render Studio Furniture</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,10 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to the collection</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
   <header class="site-header">
     <a class="brand" href="#top">Root & Render <span>Objects</span></a>
     <nav aria-label="Main navigation">
@@ -20,9 +25,9 @@
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-copy">
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy reveal">
         <p class="eyebrow">Forgotten furniture. Rewritten by hand.</p>
         <h1>Objects deserve another story.</h1>
         <p class="hero-intro">One-of-one functional art inspired by shorelines, forests, weather, memory, and the beautiful lives hidden beneath old finishes.</p>
@@ -31,13 +36,14 @@
           <a class="button button-ghost" href="#workshop">Enter the workshop</a>
         </div>
       </div>
-      <div class="hero-art" aria-label="Atmospheric abstract representation of sea, wood and aurora colours">
-        <div class="hero-orb"></div>
+      <div class="hero-art reveal" aria-label="Atmospheric abstract representation of sea, wood and aurora colours">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-orb" aria-hidden="true"></div>
         <p id="workshop-count">The archive is just beginning.</p>
       </div>
     </section>
 
-    <section id="workshop" class="section-shell section-block">
+    <section id="workshop" class="section-shell section-block reveal">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Currently awakening</p>
@@ -48,7 +54,7 @@
       <div id="workshop-grid" class="piece-grid"></div>
     </section>
 
-    <section class="feature-band">
+    <section class="feature-band reveal">
       <div class="section-shell">
         <p class="eyebrow">The process</p>
         <h2>Rescue. Repair. Reimagine. Return.</h2>
@@ -56,12 +62,12 @@
           <article><span>01</span><h3>Found</h3><p>A cast-off piece arrives with all its scars and possibilities intact.</p></article>
           <article><span>02</span><h3>Restored</h3><p>Loose joints, rough surfaces, and tired hardware are made sound again.</p></article>
           <article><span>03</span><h3>Transformed</h3><p>Layered colour, texture, grain, and restraint create a singular finish.</p></article>
-          <article><span>04</span><h3>Rehomed</h3><p>The object leaves the workshop ready to begin another chapter.</p></article>
+          <article><span>04</span><h3>Found a home</h3><p>The object leaves the workshop ready to begin another chapter.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="archive" class="section-shell section-block">
+    <section id="archive" class="section-shell section-block reveal">
       <div class="section-heading">
         <div>
           <p class="eyebrow">One of one</p>
@@ -77,7 +83,7 @@
       <div id="archive-grid" class="piece-grid"></div>
     </section>
 
-    <section id="commissions" class="commission-section">
+    <section id="commissions" class="commission-section reveal">
       <div class="section-shell commission-layout">
         <div>
           <p class="eyebrow">A piece of your own</p>
@@ -88,8 +94,8 @@
         <form name="commission" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="studio-form">
           <input type="hidden" name="form-name" value="commission">
           <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
-          <label>Name<input name="name" required></label>
-          <label>Email<input type="email" name="email" required></label>
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
           <label>Location<input name="location" placeholder="Town or region"></label>
           <label>Furniture type<input name="furniture-type" placeholder="Dresser, table, cabinet..."></label>
           <label>Budget range<select name="budget"><option value="">Choose one</option><option>$250–$500</option><option>$500–$900</option><option>$900+</option></select></label>
@@ -99,7 +105,7 @@
       </div>
     </section>
 
-    <section class="section-shell about-section">
+    <section class="section-shell about-section reveal">
       <p class="eyebrow">About the studio</p>
       <h2>Built slowly, with wonder.</h2>
       <p>Root & Render Studio rescues overlooked furniture and turns it into functional art shaped by landscape, weather, colour, and memory. Every piece remains one of one.</p>
@@ -125,9 +131,9 @@
       <input type="hidden" name="form-name" value="reservation">
       <input type="hidden" id="reservation-piece" name="piece">
       <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
-      <label>Name<input name="name" required></label>
-      <label>Email<input type="email" name="email" required></label>
-      <label>Phone<input name="phone"></label>
+      <label>Name<input name="name" autocomplete="name" required></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required></label>
+      <label>Phone<input name="phone" autocomplete="tel"></label>
       <label>Pickup or delivery notes<textarea name="message" rows="4"></textarea></label>
       <button class="button button-primary" type="submit">Request reservation</button>
     </form>
