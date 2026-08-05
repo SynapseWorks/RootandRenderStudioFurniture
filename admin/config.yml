@@ -35,14 +35,28 @@ collections:
                   - { label: "Available", value: "available" }
                   - { label: "Reserved", value: "reserved" }
                   - { label: "Found a home", value: "found-a-home" }
-              - { label: "Status label", name: "statusLabel", widget: "string" }
+              - { label: "Status label", name: "statusLabel", widget: "string", hint: "Public wording, such as In the workshop or Found a home" }
               - { label: "Price CAD", name: "price", widget: "number", value_type: "int", required: false }
               - { label: "Progress percent", name: "progress", widget: "number", value_type: "int", min: 0, max: 100, default: 0 }
               - { label: "Card summary", name: "summary", widget: "text" }
               - { label: "Full story", name: "story", widget: "text" }
               - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
               - { label: "Materials", name: "materials", widget: "text", required: false }
-              - { label: "Main image", name: "image", widget: "image", required: false }
+              - { label: "Before image", name: "beforeImage", widget: "image", required: false }
+              - { label: "Main or finished image", name: "image", widget: "image", required: false }
+              - label: "Gallery images"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "Transformation timeline"
+                name: "timeline"
+                widget: "list"
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Stage title", name: "title", widget: "string" }
+                  - { label: "Stage story", name: "text", widget: "text" }
               - label: "Placeholder colour"
                 name: "imageClass"
                 widget: "select"
