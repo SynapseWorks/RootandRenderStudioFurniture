@@ -1,0 +1,36 @@
+{
+  "pieces": [
+    {
+      "id": "001",
+      "title": "Tides Remember",
+      "theme": "Ocean Driftwood",
+      "status": "in-workshop",
+      "statusLabel": "In the workshop",
+      "price": 325,
+      "progress": 15,
+      "summary": "A forgotten pine cabinet becoming a weather-worn relic of tide, salt, copper, and sea glass.",
+      "story": "Found in warm pine with a heart cut into its frame, this small cabinet is being rebuilt as though it spent decades beside the Atlantic. Charcoal shadows, broken turquoise, pale seafoam, visible grain, and aged copper will preserve its history while giving it an entirely new life.",
+      "dimensions": "To be measured",
+      "materials": "Pine, water-based furniture paint, acrylic glazes, copper accents, satin protective finish",
+      "image": "",
+      "imageClass": "placeholder-ocean",
+      "featured": true
+    },
+    {
+      "id": "002",
+      "title": "Aurora After Dark",
+      "theme": "Aurora",
+      "status": "planned",
+      "statusLabel": "Planned",
+      "price": 295,
+      "progress": 5,
+      "summary": "A slender console table waiting to carry turquoise, violet, ember, and antique gold across its surface.",
+      "story": "The quiet frame will remain dark and elegant while the tabletop becomes the sky: layered teal, violet, burgundy, ember-orange, and gold. The finished piece will feel less like painted furniture and more like a functional landscape.",
+      "dimensions": "To be measured",
+      "materials": "Wood, charcoal furniture paint, acrylic glazes, metallic accents, satin protective finish",
+      "image": "",
+      "imageClass": "placeholder-aurora",
+      "featured": true
+    }
+  ]
+}
