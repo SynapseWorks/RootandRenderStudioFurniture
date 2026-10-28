@@ -12,7 +12,7 @@ function imageStyle(url){return url?`background-image:url('${String(url).replace
 function themeClass(piece){return `theme-${(piece.theme||'object').toLowerCase().replace(/[^a-z0-9]+/g,'-')}`;}
 function cardTemplate(piece){
  const progress=Number.isFinite(Number(piece.progress))?Math.max(0,Math.min(100,Number(piece.progress))):0;
- return `<article class="piece-card ${themeClass(piece)}" tabindex="0" data-piece="${escapeHtml(piece.id)}" aria-label="View ${escapeHtml(piece.title)}">
+ return `<article class="piece-card ${themeClass(piece)}" role="button" aria-haspopup="dialog" aria-controls="piece-dialog" tabindex="0" data-piece="${escapeHtml(piece.id)}" aria-label="View ${escapeHtml(piece.title)}">
    <div class="piece-image ${escapeHtml(piece.imageClass||'')}" style="${imageStyle(piece.image)}"></div>
    <div class="piece-card-content">
      <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${formatPrice(piece.price)}</span></div>
@@ -57,7 +57,7 @@ function showPiece(id){
 document.querySelectorAll('.dialog-close').forEach(button=>button.addEventListener('click',()=>button.closest('dialog').close()));
 document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();}));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());});
-document.querySelectorAll('.filter-button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter-button').forEach(b=>b.classList.remove('is-active'));button.classList.add('is-active');state.filter=button.dataset.filter;render();}));
+document.querySelectorAll('.filter-button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter-button').forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false')});button.classList.add('is-active');button.setAttribute('aria-pressed','true');state.filter=button.dataset.filter;render();}));
 
 document.querySelector('#finish-list').innerHTML=['Ocean Driftwood','Aurora After Dark','Forest Relic','Autumn Ember','Ancient Stone','Midnight Botanical'].map(name=>`<span class="finish-chip">${name}</span>`).join('');
 document.querySelector('#year').textContent=new Date().getFullYear();
