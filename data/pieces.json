@@ -31,6 +31,286 @@
       "image": "",
       "imageClass": "placeholder-aurora",
       "featured": true
+    },
+    {
+      "id": "STF-001",
+      "title": "Forest Oracle",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Forest Druid",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Moss-wrapped crook with suspended green or amber crystal and botanical charms.",
+      "story": "An old woodland guide's staff, its hanging stone marking safe paths through forgotten forests.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Preserved moss, faux flowers, acrylic pendant, jute cord, copper wire",
+      "branchType": "Hooked or curved",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-002",
+      "title": "Mycelium Keeper",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Fungal Woodland",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Mushrooms clustered along natural knots, with one softly glowing cap near the crown.",
+      "story": "A keeper of underground pathways, whose tiny mushrooms glow as the forest wakes.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Foam clay, translucent mushroom caps, moss, warm-white LEDs, epoxy putty",
+      "branchType": "Twisted or knotted",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-003",
+      "title": "Astral Cartographer",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Celestial",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Pale and silvered shaft, crescent cradle, blue orb, and engraved star trails.",
+      "story": "Used to chart constellations that cannot be seen in ordinary skies.",
+      "dimensions": "Measure chosen branch",
+      "materials": "EVA foam crescent, acrylic orb, silver wire, star charms, blue LED",
+      "branchType": "Straight",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-004",
+      "title": "Bone Archivist",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Gothic Relic",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Raven skull at crown, root-like joints, charcoal patina and violet accent.",
+      "story": "Keeper of names and stories believed lost, not a weapon but a record of the departed.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Lightweight faux raven skull, epoxy putty, bone charms, violet acrylic gem",
+      "branchType": "Gnarly or twisted",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-005",
+      "title": "Wayfarer's Beacon",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Traveller",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Detachable warm-lit lantern on a rugged curved branch with practical grip wraps.",
+      "story": "A traveller's lantern that offers the comfort of a familiar light on unfamiliar roads.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Small plastic LED lantern, chain, leather lacing, brass-coloured findings",
+      "branchType": "Hooked",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-006",
+      "title": "Emberheart",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Elemental Fire",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Forked cradle holding an orange glowing crystal above dark, copper-veined bark.",
+      "story": "A smouldering ember sheltered by a pair of ancient wooden fingers.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Amber acrylic crystal, orange LEDs, copper wire, dark acrylic paints, epoxy",
+      "branchType": "Forked",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-007",
+      "title": "Winter Witch",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Elemental Ice",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Pale weathered wood, clusters of icy acrylic points, silver frost engravings.",
+      "story": "A wand of winter grown into a staff, carrying the hush of first snowfall.",
+      "dimensions": "Measure chosen branch",
+      "materials": "Acrylic icicles, pearlescent pigments, silver wire, pale-blue paint",
+      "branchType": "Forked or straight",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "STF-008",
+      "title": "Clockwork Arcanist",
+      "collection": "The Staffmaker's Collection",
+      "objectType": "Wizard staff",
+      "theme": "Arcane Mechanism",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "progress": 0,
+      "summary": "Brass-like concentric rings, lightweight gears, glowing central orb and engraved marks.",
+      "story": "An improbable measuring instrument for the movements of hidden magic.",
+      "dimensions": "Measure chosen branch",
+      "materials": "EVA foam rings, plastic gears, acrylic orb, metallic paints, electronics",
+      "branchType": "Straight and sturdy",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "buildNotes": "Design placeholder. Photograph and measure the selected natural branch; confirm mounting, safety, finish and portability before construction.",
+      "buildSteps": [
+        "Choose and prepare branch",
+        "Sketch and dry-fit crown",
+        "Secure structural mounts",
+        "Sculpt and weather details",
+        "Seal and document finished object"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial concept and materials recorded; no physical build yet."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
     }
   ]
 }
