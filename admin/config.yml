@@ -26,7 +26,9 @@ collections:
               - { label: "Piece number", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Theme", name: "theme", widget: "string" }
-              - { label: "Collection", name: "collection", widget: "string", required: false }
+              - { label: "Collection", name: "collection", widget: "select", required: false, options: ["Furniture & Transformations", "The Staffmaker's Collection", "Cosplay, Creatures & Props", "Creative Technology & Mobility", "Woodcraft & Decorative Arts", "Creatures & Curiosities", "Mechanical Experiments"] }
+              - { label: "Lifecycle", name: "lifecycle", widget: "select", required: false, options: ["idea", "concept", "prototype", "in-workshop", "complete", "paused", "retired"] }
+              - { label: "Publication", name: "publication", widget: "select", default: "public", options: ["public", "private"] }
               - { label: "Object type", name: "objectType", widget: "string", required: false }
               - { label: "Branch shape", name: "branchType", widget: "string", required: false }
               - { label: "Design version", name: "version", widget: "string", required: false }
