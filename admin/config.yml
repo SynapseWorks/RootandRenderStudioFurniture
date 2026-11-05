@@ -28,12 +28,13 @@ collections:
               - { label: "Theme", name: "theme", widget: "string" }
               - { label: "Collection", name: "collection", widget: "select", required: false, options: ["Furniture & Transformations", "The Staffmaker's Collection", "Cosplay, Creatures & Props", "Creative Technology & Mobility", "Woodcraft & Decorative Arts", "Creatures & Curiosities", "Mechanical Experiments"] }
               - { label: "Lifecycle", name: "lifecycle", widget: "select", required: false, options: ["idea", "concept", "prototype", "in-workshop", "complete", "paused", "retired"] }
-              - { label: "Publication", name: "publication", widget: "select", default: "public", options: ["public", "private"] }
+              - { label: "Gallery listing only (all data in this JSON is public)", name: "publication", widget: "select", default: "public", options: ["public", "unlisted"] }
               - { label: "Object type", name: "objectType", widget: "string", required: false }
               - { label: "Branch shape", name: "branchType", widget: "string", required: false }
               - { label: "Design version", name: "version", widget: "string", required: false }
               - { label: "Physical instance ID", name: "physicalInstance", widget: "string", required: false }
-              - { label: "Workshop notes", name: "buildNotes", widget: "text", required: false }
+              # Keep private build notes in the browser-local workshop desk, not in this published JSON.
+              - { label: "Public build overview (not private)", name: "buildNotes", widget: "text", required: false }
               - label: "Build steps"
                 name: "buildSteps"
                 widget: "list"
