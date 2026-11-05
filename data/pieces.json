@@ -14,7 +14,12 @@
       "materials": "Pine, water-based furniture paint, acrylic glazes, copper accents, satin protective finish",
       "image": "",
       "imageClass": "placeholder-ocean",
-      "featured": true
+      "featured": true,
+      "collection": "Furniture & Transformations",
+      "lifecycle": "in-workshop",
+      "publication": "public",
+      "buildJournal": [],
+      "objectType": "Furniture art"
     },
     {
       "id": "002",
@@ -30,7 +35,12 @@
       "materials": "Wood, charcoal furniture paint, acrylic glazes, metallic accents, satin protective finish",
       "image": "",
       "imageClass": "placeholder-aurora",
-      "featured": true
+      "featured": true,
+      "collection": "Furniture & Transformations",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": [],
+      "objectType": "Furniture art"
     },
     {
       "id": "STF-001",
@@ -67,7 +77,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-001",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-001"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-001",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-002",
@@ -104,7 +117,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-002",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-002"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-002",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-003",
@@ -141,7 +157,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-003",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-003"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-003",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-004",
@@ -178,7 +197,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-004",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-004"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-004",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-005",
@@ -215,7 +237,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-005",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-005"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-005",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-006",
@@ -252,7 +277,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-006",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-006"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-006",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-007",
@@ -289,7 +317,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-007",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-007"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-007",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "STF-008",
@@ -326,7 +357,10 @@
       "gallery": [],
       "featured": false,
       "armouryId": "STF-008",
-      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-008"
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-008",
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-001",
@@ -363,7 +397,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "in-workshop",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-002",
@@ -399,7 +436,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-003",
@@ -435,7 +475,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-004",
@@ -471,7 +514,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-005",
@@ -506,7 +552,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-006",
@@ -541,7 +590,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-007",
@@ -576,7 +628,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-008",
@@ -611,7 +666,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "COS-009",
@@ -647,7 +705,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "TECH-001",
@@ -682,7 +743,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "TECH-002",
@@ -717,7 +781,10 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     },
     {
       "id": "TECH-003",
@@ -752,7 +819,200 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
+    },
+    {
+      "id": "ART-001",
+      "title": "Woodland Painted Coasters",
+      "collection": "Woodcraft & Decorative Arts",
+      "objectType": "Painted woodcraft",
+      "theme": "Woodland Linocut",
+      "summary": "Hand-painted wooden coasters using limited colour palettes and original woodland illustrations.",
+      "story": "A small-object series exploring linocut-inspired foxes, snowy landscapes and expressive linework. Protective clear finishes and practical surface durability are part of the design process.",
+      "materials": "Wood blanks, acrylic paint, brushes, compatible protective topcoat; test pieces required.",
+      "buildSteps": [
+        "Choose and sand wood blanks",
+        "Paint original woodland designs",
+        "Test protective clear coatings",
+        "Check heat and water resistance",
+        "Document each finished variant"
+      ],
+      "buildNotes": "Concept only; the painted wooden coaster plan is not yet recorded as a completed saleable item.",
+      "status": "planned",
+      "statusLabel": "Concept · not built",
+      "progress": 0,
+      "price": null,
+      "dimensions": "To be determined",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial idea recorded."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
+    },
+    {
+      "id": "ART-002",
+      "title": "Miniature Worlds in Resin",
+      "collection": "Woodcraft & Decorative Arts",
+      "objectType": "Resin diorama objects",
+      "theme": "Miniature Dioramas",
+      "summary": "Future resin coasters and keepsakes containing tiny sculpted scenes and landscapes.",
+      "story": "A longer-term exploration of miniature scenes embedded in clear cast resin, growing from simpler painted and sealed wooden pieces.",
+      "materials": "Future research: casting resin, reusable moulds, miniature scenic materials, pigments and appropriate PPE.",
+      "buildSteps": [
+        "Practice tiny diorama composition",
+        "Test resin compatibility with miniatures",
+        "Plan mould depth and staged pours",
+        "Control bubbles and cure conditions",
+        "Document safe finished prototypes"
+      ],
+      "buildNotes": "Research concept. No resin pour or completed object is claimed.",
+      "status": "planned",
+      "statusLabel": "Concept · not built",
+      "progress": 0,
+      "price": null,
+      "dimensions": "To be determined",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial idea recorded."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
+    },
+    {
+      "id": "CRT-001",
+      "title": "Potty — Physical Creature Study",
+      "collection": "Creatures & Curiosities",
+      "objectType": "Creature sculpture / puppet concept",
+      "theme": "Bestiary Sculpture",
+      "summary": "A potential physical interpretation of Potty from The Bestiary of the Margins, with an antlered mask and cracked-pot body.",
+      "story": "A sculptural interpretation of an original illustrated creature: mysterious antlered face-mask, bright eyes and a lower face that may belong to the creature beneath.",
+      "materials": "Potential: sculpting clay or foam, faux antlers, lightweight structure, acrylic paints, optional eyes.",
+      "buildSteps": [
+        "Revisit original creature drawings",
+        "Choose scale and whether to puppet",
+        "Make armature and form studies",
+        "Sculpt and paint",
+        "Record photos and lore"
+      ],
+      "buildNotes": "Unbuilt concept; preserve original illustration's character details rather than inventing additional canon.",
+      "status": "planned",
+      "statusLabel": "Concept · not built",
+      "progress": 0,
+      "price": null,
+      "dimensions": "To be determined",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial idea recorded."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
+    },
+    {
+      "id": "CRT-002",
+      "title": "Nix — Physical Creature Study",
+      "collection": "Creatures & Curiosities",
+      "objectType": "Creature sculpture concept",
+      "theme": "Bestiary Sculpture",
+      "summary": "A future three-dimensional creature study derived from Nix in The Bestiary of the Margins.",
+      "story": "An exploratory physical adaptation of an original Bestiary creature. The final shape, materials and movement are intentionally open until the reference drawing is revisited.",
+      "materials": "To determine after reviewing original artwork.",
+      "buildSteps": [
+        "Review original Nix reference",
+        "Decide sculpture versus puppet",
+        "Sketch form and scale",
+        "Prototype materials",
+        "Build and document when ready"
+      ],
+      "buildNotes": "Name-level concept only; no invented anatomy or fabrication.",
+      "status": "planned",
+      "statusLabel": "Concept · not built",
+      "progress": 0,
+      "price": null,
+      "dimensions": "To be determined",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial idea recorded."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
+    },
+    {
+      "id": "MEC-001",
+      "title": "Animatronic Eye & Jaw Test Bench",
+      "collection": "Mechanical Experiments",
+      "objectType": "Reusable puppetry mechanism",
+      "theme": "Practical Effects",
+      "summary": "A place to document reusable eye rotation, jaw linkage and hand-operated creature-control tests.",
+      "story": "A technical experiment stream inspired by the developing Scrapyard Freddy mechanisms. Distinct bench prototypes can be spun off into their own record once constructed and measured.",
+      "materials": "Potential: pivots, cable or linkage controls, bungee, fasteners, mounts and test housing.",
+      "buildSteps": [
+        "Document existing Freddy mechanism references",
+        "Separate generalizable mechanism from costume-specific fitting",
+        "Define small benchtop test",
+        "Record range of motion and failures",
+        "Create reusable engineering pattern"
+      ],
+      "buildNotes": "This is a proposed shared test-bench record, not a separate completed machine. Detailed original technical records remain in Armoury.",
+      "status": "planned",
+      "statusLabel": "Concept · not built",
+      "progress": 0,
+      "price": null,
+      "dimensions": "To be determined",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial idea recorded."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false,
+      "lifecycle": "concept",
+      "publication": "public",
+      "buildJournal": []
     }
   ]
 }
