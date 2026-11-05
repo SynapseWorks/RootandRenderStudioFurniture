@@ -7,7 +7,8 @@ const dialogContent=document.querySelector('#dialog-content');
 const reservationPiece=document.querySelector('#reservation-piece');
 
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-function formatPrice(value){return value?new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(value):'Price coming soon';}
+function formatPrice(value){return value!=null&&value!==''?new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(value):'Price on request';}
+function isStaff(piece){return piece.collection==="The Staffmaker's Collection";}
 function imageStyle(url){return url?`background-image:url('${String(url).replace(/'/g,"%27")}')`:'';}
 function themeClass(piece){return `theme-${(piece.theme||'object').toLowerCase().replace(/[^a-z0-9]+/g,'-')}`;}
 function cardTemplate(piece){
@@ -15,7 +16,7 @@ function cardTemplate(piece){
  return `<article class="piece-card ${themeClass(piece)}" role="button" aria-haspopup="dialog" aria-controls="piece-dialog" tabindex="0" data-piece="${escapeHtml(piece.id)}" aria-label="View ${escapeHtml(piece.title)}">
    <div class="piece-image ${escapeHtml(piece.imageClass||'')}" style="${imageStyle(piece.image)}"></div>
    <div class="piece-card-content">
-     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${formatPrice(piece.price)}</span></div>
+     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${isStaff(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</span></div>
      <h3>${escapeHtml(piece.title)}</h3><p>${escapeHtml(piece.summary)}</p>
      ${['in-workshop','planned'].includes(piece.status)?`<div class="progress-wrap" aria-label="${progress}% complete"><span style="width:${progress}%"></span></div>`:''}
      <span class="card-invitation">Open its story <b aria-hidden="true">↗</b></span>
@@ -25,7 +26,7 @@ function cardTemplate(piece){
 function render(){
  const workshop=state.pieces.filter(p=>['in-workshop','planned'].includes(p.status));
  workshopGrid.innerHTML=workshop.length?workshop.map(cardTemplate).join(''):'<p class="empty-state">No pieces are currently in the workshop. The next rescue is still waiting to be found.</p>';
- const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>p.status===state.filter);
+ const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>state.filter==='staffs'?isStaff(p):state.filter==='furniture'?!isStaff(p):p.status===state.filter);
  archiveGrid.innerHTML=visible.length?visible.map(cardTemplate).join(''):'<p class="empty-state">No pieces in this part of the archive yet.</p>';
  document.querySelector('#workshop-count').textContent=workshop.length?`${workshop.length} ${workshop.length===1?'object is':'objects are'} currently awakening in the workshop.`:'The workshop is quiet—for now.';
  bindCards();
@@ -37,7 +38,7 @@ function defaultTimeline(piece){return [
  {title:'Reimagined',text:piece.summary},
  {title:piece.status==='found-a-home'?'Found a home':'Returned',text:piece.status==='found-a-home'?'Its next chapter has already begun.':'Sealed for use and waiting for the right home.'}
 ];}
-function timelineTemplate(piece){const timeline=Array.isArray(piece.timeline)&&piece.timeline.length?piece.timeline:defaultTimeline(piece);return `<div class="story-timeline">${timeline.map((step,index)=>`<article><span>${String(index+1).padStart(2,'0')}</span><div><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.text)}</p></div></article>`).join('')}</div>`;}
+function timelineTemplate(piece){const timeline=Array.isArray(piece.timeline)&&piece.timeline.length?piece.timeline:isStaff(piece)?[{title:'Concept recorded',text:'Design inspiration and a first materials list have been captured.'},{title:'Select the branch',text:'Choose the physical stick, measure it and photograph its original shape.'},{title:'Workshop build',text:'Dry-fit, securely mount, shape, finish and document the construction.'},{title:'Artifact complete',text:'Record final photos, measurements, actual costs and the finished version.'}]:defaultTimeline(piece);return `<div class="story-timeline">${timeline.map((step,index)=>`<article><span>${String(index+1).padStart(2,'0')}</span><div><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.text)}</p></div></article>`).join('')}</div>`;}
 function beforeAfterTemplate(piece){if(!piece.beforeImage||!piece.image)return'';return `<div class="before-after" data-before-after><div class="compare-layer compare-after" style="${imageStyle(piece.image)}"></div><div class="compare-layer compare-before" style="${imageStyle(piece.beforeImage)}"><span>Before</span></div><span class="after-label">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after images"></div>`;}
 function galleryTemplate(piece){const images=Array.isArray(piece.gallery)?piece.gallery.filter(Boolean):[];if(!images.length)return'';return `<div class="dialog-gallery">${images.map((image,index)=>`<button type="button" data-gallery-image="${escapeHtml(image)}" aria-label="View gallery image ${index+1}" style="${imageStyle(image)}"></button>`).join('')}</div>`;}
 function showPiece(id){
@@ -45,8 +46,8 @@ function showPiece(id){
  dialogContent.innerHTML=`<div class="dialog-hero ${escapeHtml(piece.imageClass||'')} ${themeClass(piece)}" style="${imageStyle(piece.image)}"><span class="dialog-status">${escapeHtml(piece.statusLabel)}</span></div>
  <div class="dialog-body"><p class="eyebrow">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.theme)}</p><h2>${escapeHtml(piece.title)}</h2><p class="dialog-story">${escapeHtml(piece.story)}</p>
  ${beforeAfterTemplate(piece)}${timelineTemplate(piece)}${galleryTemplate(piece)}
- <div class="dialog-details"><div><small>Status</small>${escapeHtml(piece.statusLabel)}</div><div><small>Dimensions</small>${escapeHtml(piece.dimensions||'To be measured')}</div><div><small>Price</small>${formatPrice(piece.price)}</div></div>
- <p class="dialog-story"><strong>Materials:</strong> ${escapeHtml(piece.materials||'Details coming soon')}</p>
+ <div class="dialog-details"><div><small>Status</small>${escapeHtml(piece.statusLabel)}</div><div><small>Dimensions</small>${escapeHtml(piece.dimensions||'To be measured')}</div><div><small>${isStaff(piece)?"Design version":"Price"}</small>${isStaff(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</div></div>
+ <p class="dialog-story"><strong>Materials:</strong> ${escapeHtml(piece.materials||'Details coming soon')}</p>${isStaff(piece)?`<p class="dialog-story"><strong>Branch:</strong> ${escapeHtml(piece.branchType||"To choose")} · <strong>Instance:</strong> ${escapeHtml(piece.physicalInstance||"Not assigned")}</p><p class="dialog-story"><strong>Workshop notes:</strong> ${escapeHtml(piece.buildNotes||"")}</p>${Array.isArray(piece.versions)?`<h3>Version history</h3><div class="story-timeline">${piece.versions.map(v=>`<article><strong>v${escapeHtml(v.version)}</strong> · ${escapeHtml(v.status)}<p>${escapeHtml(v.notes)}</p></article>`).join("")}</div>`:""}${Array.isArray(piece.buildSteps)?`<h3>Proposed build steps</h3><ol>${piece.buildSteps.map(step=>`<li>${escapeHtml(step)}</li>`).join("")}</ol>`:""}`:""}
  ${piece.status==='available'?`<button class="button button-primary reserve-button" data-reserve="${escapeHtml(piece.id)}">Reserve this piece</button>`:''}</div>`;
  pieceDialog.showModal();
  const range=dialogContent.querySelector('[data-before-after] input');if(range)range.addEventListener('input',event=>event.currentTarget.closest('[data-before-after]').style.setProperty('--position',`${event.currentTarget.value}%`));
