@@ -9,9 +9,9 @@ const reservationPiece=document.querySelector('#reservation-piece');
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 function formatPrice(value){return value!=null&&value!==''?new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(value):'Price on request';}
 function isStaff(piece){return piece.collection==="The Staffmaker's Collection";}
-function isArtifact(piece){return !!piece.collection;}
+function isArtifact(piece){return !!piece.collection&&piece.collection!=='Furniture & Transformations';}
 function lifecycle(piece){return piece.lifecycle||(piece.status==='in-workshop'?'in-workshop':'concept');}
-function publicPieces(){return state.pieces.filter(p=>p.publication!=='private');}
+function publicPieces(){return state.pieces.filter(p=>p.publication!=='unlisted');}
 function imageStyle(url){return url?`background-image:url('${String(url).replace(/'/g,"%27")}')`:'';}
 function themeClass(piece){return `theme-${(piece.theme||'object').toLowerCase().replace(/[^a-z0-9]+/g,'-')}`;}
 function cardTemplate(piece){
@@ -19,9 +19,9 @@ function cardTemplate(piece){
  return `<article class="piece-card ${themeClass(piece)}" role="button" aria-haspopup="dialog" aria-controls="piece-dialog" tabindex="0" data-piece="${escapeHtml(piece.id)}" aria-label="View ${escapeHtml(piece.title)}">
    <div class="piece-image ${escapeHtml(piece.imageClass||'')}" style="${imageStyle(piece.image)}">${piece.image?"":`<div class="artifact-placeholder"><span>${escapeHtml(piece.collection||"Furniture & Transformations")}</span><strong>${escapeHtml(piece.title)}</strong><small>${escapeHtml(piece.lifecycle||"Concept")}</small></div>`}</div>
    <div class="piece-card-content">
-     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${isArtifact(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</span></div>
+     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${isArtifact(piece)?escapeHtml(`v${piece.version||"0.1"}`):piece.status==="available"?formatPrice(piece.price):"Not for sale"}</span></div>
      <h3>${escapeHtml(piece.title)}</h3><p>${escapeHtml(piece.summary)}</p>
-     ${['in-workshop','planned'].includes(piece.status)?`<div class="progress-wrap" aria-label="${progress}% complete"><span style="width:${progress}%"></span></div>`:''}
+     ${lifecycle(piece)==='in-workshop'&&progress>0?`<div class="progress-wrap" aria-label="${progress}% complete"><span style="width:${progress}%"></span></div>`:''}
      <span class="card-invitation">Open its story <b aria-hidden="true">↗</b></span>
    </div>
  </article>`;
