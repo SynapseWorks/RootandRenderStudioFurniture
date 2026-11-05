@@ -9,6 +9,7 @@ const reservationPiece=document.querySelector('#reservation-piece');
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 function formatPrice(value){return value!=null&&value!==''?new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}).format(value):'Price on request';}
 function isStaff(piece){return piece.collection==="The Staffmaker's Collection";}
+function isArtifact(piece){return !!piece.collection;}
 function imageStyle(url){return url?`background-image:url('${String(url).replace(/'/g,"%27")}')`:'';}
 function themeClass(piece){return `theme-${(piece.theme||'object').toLowerCase().replace(/[^a-z0-9]+/g,'-')}`;}
 function cardTemplate(piece){
@@ -16,7 +17,7 @@ function cardTemplate(piece){
  return `<article class="piece-card ${themeClass(piece)}" role="button" aria-haspopup="dialog" aria-controls="piece-dialog" tabindex="0" data-piece="${escapeHtml(piece.id)}" aria-label="View ${escapeHtml(piece.title)}">
    <div class="piece-image ${escapeHtml(piece.imageClass||'')}" style="${imageStyle(piece.image)}"></div>
    <div class="piece-card-content">
-     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${isStaff(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</span></div>
+     <div class="piece-meta"><span class="status">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.statusLabel)}</span><span class="price">${isArtifact(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</span></div>
      <h3>${escapeHtml(piece.title)}</h3><p>${escapeHtml(piece.summary)}</p>
      ${['in-workshop','planned'].includes(piece.status)?`<div class="progress-wrap" aria-label="${progress}% complete"><span style="width:${progress}%"></span></div>`:''}
      <span class="card-invitation">Open its story <b aria-hidden="true">↗</b></span>
@@ -26,7 +27,7 @@ function cardTemplate(piece){
 function render(){
  const workshop=state.pieces.filter(p=>p.status==='in-workshop'||(p.status==='planned'&&!p.collection));
  workshopGrid.innerHTML=workshop.length?workshop.map(cardTemplate).join(''):'<p class="empty-state">No pieces are currently in the workshop. The next rescue is still waiting to be found.</p>';
- const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>state.filter==='staffs'?isStaff(p):state.filter==='furniture'?!p.collection:state.filter==='cosplay'?p.collection==='Cosplay, Creatures & Props':p.status===state.filter);
+ const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>state.filter==='staffs'?isStaff(p):state.filter==='furniture'?!p.collection:state.filter==='cosplay'?p.collection==='Cosplay, Creatures & Props':state.filter==='technology'?p.collection==='Creative Technology & Mobility':p.status===state.filter);
  archiveGrid.innerHTML=visible.length?visible.map(cardTemplate).join(''):'<p class="empty-state">No pieces in this part of the archive yet.</p>';
  document.querySelector('#workshop-count').textContent=workshop.length?`${workshop.length} ${workshop.length===1?'object is':'objects are'} currently awakening in the workshop.`:'The workshop is quiet—for now.';
  bindCards();
@@ -46,8 +47,8 @@ function showPiece(id){
  dialogContent.innerHTML=`<div class="dialog-hero ${escapeHtml(piece.imageClass||'')} ${themeClass(piece)}" style="${imageStyle(piece.image)}"><span class="dialog-status">${escapeHtml(piece.statusLabel)}</span></div>
  <div class="dialog-body"><p class="eyebrow">Piece ${escapeHtml(piece.id)} · ${escapeHtml(piece.theme)}</p><h2>${escapeHtml(piece.title)}</h2><p class="dialog-story">${escapeHtml(piece.story)}</p>
  ${beforeAfterTemplate(piece)}${timelineTemplate(piece)}${galleryTemplate(piece)}
- <div class="dialog-details"><div><small>Status</small>${escapeHtml(piece.statusLabel)}</div><div><small>Dimensions</small>${escapeHtml(piece.dimensions||'To be measured')}</div><div><small>${isStaff(piece)?"Design version":"Price"}</small>${isStaff(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</div></div>
- <p class="dialog-story"><strong>Materials:</strong> ${escapeHtml(piece.materials||'Details coming soon')}</p>${isStaff(piece)?`<p class="dialog-story"><strong>Branch:</strong> ${escapeHtml(piece.branchType||"To choose")} · <strong>Instance:</strong> ${escapeHtml(piece.physicalInstance||"Not assigned")}</p><p class="dialog-story"><strong>Workshop notes:</strong> ${escapeHtml(piece.buildNotes||"")}</p>${Array.isArray(piece.versions)?`<h3>Version history</h3><div class="story-timeline">${piece.versions.map(v=>`<article><strong>v${escapeHtml(v.version)}</strong> · ${escapeHtml(v.status)}<p>${escapeHtml(v.notes)}</p></article>`).join("")}</div>`:""}${Array.isArray(piece.buildSteps)?`<h3>Proposed build steps</h3><ol>${piece.buildSteps.map(step=>`<li>${escapeHtml(step)}</li>`).join("")}</ol>`:""}`:""}
+ <div class="dialog-details"><div><small>Status</small>${escapeHtml(piece.statusLabel)}</div><div><small>Dimensions</small>${escapeHtml(piece.dimensions||'To be measured')}</div><div><small>${isArtifact(piece)?"Design version":"Price"}</small>${isArtifact(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</div></div>
+ <p class="dialog-story"><strong>Materials:</strong> ${escapeHtml(piece.materials||'Details coming soon')}</p>${isArtifact(piece)?`<p class="dialog-story">${piece.branchType?`<strong>Branch:</strong> ${escapeHtml(piece.branchType)} · `:""}<strong>Instance:</strong> ${escapeHtml(piece.physicalInstance||"Not assigned")}</p><p class="dialog-story"><strong>Workshop notes:</strong> ${escapeHtml(piece.buildNotes||"")}</p>${Array.isArray(piece.versions)?`<h3>Version history</h3><div class="story-timeline">${piece.versions.map(v=>`<article><strong>v${escapeHtml(v.version)}</strong> · ${escapeHtml(v.status)}<p>${escapeHtml(v.notes)}</p></article>`).join("")}</div>`:""}${Array.isArray(piece.buildSteps)?`<h3>Proposed build steps</h3><ol>${piece.buildSteps.map(step=>`<li>${escapeHtml(step)}</li>`).join("")}</ol>`:""}`:""}
  ${piece.armouryUrl?`<p class="dialog-story"><a href="${escapeHtml(piece.armouryUrl)}" target="_blank" rel="noopener noreferrer">View technical record in Armoury ↗</a></p>`:""}
  ${piece.status==='available'?`<button class="button button-primary reserve-button" data-reserve="${escapeHtml(piece.id)}">Reserve this piece</button>`:''}</div>`;
  pieceDialog.showModal();
