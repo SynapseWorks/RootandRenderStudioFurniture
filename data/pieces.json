@@ -648,6 +648,111 @@
       "image": "",
       "gallery": [],
       "featured": false
+    },
+    {
+      "id": "TECH-001",
+      "title": "Project Sprite — Wearable Prototype",
+      "collection": "Creative Technology & Mobility",
+      "objectType": "Wearable spatial-computing R&D",
+      "theme": "Wearable Computing",
+      "summary": "Long-term wearable and spatial-computing system exploring smart glasses, anchored interfaces, environmental sensing, gestures and AI assistance.",
+      "story": "A modular research programme rather than a finished object. Physical prototypes may include smart-glasses frames, sensors, gesture input, edge hubs and environmental interaction devices. The software vision lives within the wider Sprite / S.A.G.E. / AetherOS ecosystem.",
+      "materials": "Research candidates: 3D-printed housings, small displays or optics, cameras, sensor modules, microcontrollers, battery systems and replaceable mounts; no bill of materials approved.",
+      "buildSteps": [
+        "Document use cases and privacy boundaries",
+        "Choose one isolated wearable hardware prototype",
+        "Test fit, power, temperature and ergonomics",
+        "Document sensor and interface experiments",
+        "Reassess integration with S.A.G.E. and spatial workspaces"
+      ],
+      "buildNotes": "Umbrella research project. Record distinct physical prototypes as child instances when they exist. No complete wearable device claimed.",
+      "physicalInstance": "No prototype assigned",
+      "status": "planned",
+      "statusLabel": "Research concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "version": "0.1",
+      "dimensions": "TBD — prototype design",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Concept archived from earlier Sprite/NOVA/NOMAD planning; no hardware completion claimed."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "TECH-002",
+      "title": "NOVA — Flying AI Companion",
+      "collection": "Creative Technology & Mobility",
+      "objectType": "Companion drone / robotics concept",
+      "theme": "Companion Robotics",
+      "summary": "Flubber/Weebo-inspired personal AI flying companion with a friendly face, responsive lights and eventual spatial awareness.",
+      "story": "NOVA is the named Flubber-inspired autonomous companion drone concept, earlier explored as Weebette and in later creative notes as Lumen. A fantasy-like flying familiar: playful in appearance, practical in sensing, designed to work with Project Sprite and S.A.G.E. Distinguish early explorations and naming from confirmed fabrication.",
+      "materials": "Research candidates: enclosed or ducted-fan micro-drone platform, 3D-printed shell, lightweight face display or LEDs, camera, proximity sensors, docking hardware; flight electronics to be selected.",
+      "buildSteps": [
+        "Define safe indoor proof-of-concept and airframe limits",
+        "Bench-test lighting and animated face without flight",
+        "Prototype lightweight non-sharp enclosure",
+        "Evaluate flight stability and safe autonomous behavior",
+        "Document docking, battery handling and interaction concepts"
+      ],
+      "buildNotes": "Concept only; do not depict as a working autonomous flying robot. Prototype in simulation and controlled environments, respecting local drone rules.",
+      "physicalInstance": "No prototype assigned",
+      "status": "planned",
+      "statusLabel": "Research concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "version": "0.1",
+      "dimensions": "TBD — prototype design",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Concept archived from earlier Sprite/NOVA/NOMAD planning; no hardware completion claimed."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "TECH-003",
+      "title": "NOMAD — Electric Cargo Bike & Mobile Hub",
+      "collection": "Creative Technology & Mobility",
+      "objectType": "Mobility / mobile computing concept",
+      "theme": "Mobile Workshop",
+      "summary": "An electric cargo-bike concept serving as a portable edge-computing and field-work platform for exploration, power, sensors and local AI.",
+      "story": "NOMAD was explored as a bike-based mobile hub for Project Sprite and S.A.G.E., alongside a portable/offline knowledge-node concept also called NOMAD. This entry tracks the bike-mounted physical direction without merging those ideas into a confirmed completed machine.",
+      "materials": "Research candidates: cargo bicycle or e-cargo platform, weatherproof removable electronics enclosure, power management, mounting hardware, secured storage, field networking and sensors.",
+      "buildSteps": [
+        "Clarify cycling, transport and field-work use cases",
+        "Choose an appropriate safe and legal bike platform",
+        "Plan removable weather-resistant electronics packaging",
+        "Prototype low-power local node off-bike",
+        "Test attachment, weight distribution and electrical safety"
+      ],
+      "buildNotes": "Concept only; bike specifications, ownership, power system and build status remain to be verified. Portable/offline node is a related but separate design direction.",
+      "physicalInstance": "No build assigned",
+      "status": "planned",
+      "statusLabel": "Research concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "version": "0.1",
+      "dimensions": "TBD — prototype design",
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Concept archived from earlier Sprite/NOVA/NOMAD planning; no hardware completion claimed."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
     }
   ]
 }
