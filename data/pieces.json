@@ -19,7 +19,17 @@
       "lifecycle": "in-workshop",
       "publication": "public",
       "buildJournal": [],
-      "objectType": "Furniture art"
+      "objectType": "Furniture art",
+      "timeline": [
+        {
+          "title": "Done so far",
+          "text": "The pine cabinet has been found and the sea-worn finish planned around its original heart cutout."
+        },
+        {
+          "title": "Up next",
+          "text": "Measure the cabinet and test the charcoal, turquoise and seafoam finishes."
+        }
+      ]
     },
     {
       "id": "002",
@@ -369,11 +379,11 @@
       "objectType": "Cosplay / animatronic puppet",
       "theme": "Cosplay / animatronic puppet",
       "status": "in-workshop",
-      "statusLabel": "Active build",
+      "statusLabel": "In the workshop",
       "price": null,
       "progress": 28,
-      "summary": "An active, distressed animatronic-style wearable puppet build with hand-operated mechanisms and a modular fitted chassis.",
-      "story": "An oversized, scrap-built Freddy character that explores mechanical puppetry, expressive eyes and jaw movement. Previously recorded as Nightmare Freddy; the historical project and fitted harness records are preserved.",
+      "summary": "A wearable Freddy puppet with a scrap-built frame and hand-operated eyes and jaw.",
+      "story": "An oversized, weathered Freddy costume built around mechanical puppetry. A converted scooter handle turns the eyes, and a bungee linkage moves the jaw.",
       "dimensions": "To measure",
       "materials": "Wearable backplate, structural supports, mechanical linkages, bungee cord, sculptural shell and weathered finishes (final inventory to verify)",
       "version": "0.1",
@@ -400,7 +410,17 @@
       "featured": false,
       "lifecycle": "in-workshop",
       "publication": "public",
-      "buildJournal": []
+      "buildJournal": [],
+      "timeline": [
+        {
+          "title": "Done so far",
+          "text": "The wearable backplate and arm controls have been developed, with prototypes for the eye and jaw linkages."
+        },
+        {
+          "title": "Up next",
+          "text": "Fit the foam exterior and test how the puppet moves when worn."
+        }
+      ]
     },
     {
       "id": "COS-002",

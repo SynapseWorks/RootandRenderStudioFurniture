@@ -22,10 +22,9 @@
   <header class="site-header">
     <a class="brand" href="#top">Root & Render <span>Objects</span></a>
     <nav aria-label="Main navigation">
-      <a href="#workshop">Workshop</a>
-      <a href="#builds">Process</a>
-      <a href="#workbench">Workshop desk</a>
-      <a href="#archive">Archive</a>
+      <a href="#workshop">Current builds</a>
+      <a href="#process">Process</a>
+      <a href="#archive">Collections</a>
       <a href="#commissions">Inquiries</a>
     </nav>
   </header>
@@ -37,8 +36,8 @@
         <h1>The wonder is in the making.</h1>
         <p class="hero-intro">An evolving collection of furniture, handmade artifacts, practical creature effects and inventive experiments. Some pieces are being built today; others begin here as ideas, clearly marked until they become real.</p>
         <div class="button-row">
-          <a class="button button-primary" href="#archive">Explore the archive</a>
-          <a class="button button-ghost" href="#workshop">See what is being made</a>
+          <a class="button button-primary" href="#archive">Browse collections</a>
+          <a class="button button-ghost" href="#workshop">See current builds</a>
         </div>
       </div>
       <div class="hero-art reveal" aria-label="Atmospheric abstract representation of sea, wood and aurora colours">
@@ -59,7 +58,7 @@
       <div id="workshop-grid" class="piece-grid"></div>
     </section>
 
-    <section class="feature-band reveal">
+    <section id="process" class="feature-band reveal">
       <div class="section-shell">
         <p class="eyebrow">Our process</p>
         <h2>Observe. Experiment. Make. Document.</h2>
@@ -92,23 +91,24 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">The collection</p>
-          <h2>Objects, builds & ideas</h2>
+          <h2>Browse the collections</h2>
         </div>
         <div class="filters" role="group" aria-label="Filter objects archive">
-          <button class="filter-button" aria-pressed="false" data-filter="staffs">Wizard staffs</button>
+          <button class="filter-button is-active" aria-pressed="true" data-filter="all">All</button>
+          <button class="filter-button" aria-pressed="false" data-filter="in-workshop">In progress</button>
+          <button class="filter-button" aria-pressed="false" data-filter="staffs">Staffmaker’s Collection</button>
           <button class="filter-button" aria-pressed="false" data-filter="technology">Creative technology</button>
           <button class="filter-button" aria-pressed="false" data-filter="cosplay">Cosplay &amp; props</button>
           <button class="filter-button" aria-pressed="false" data-filter="woodcraft">Woodcraft</button>
           <button class="filter-button" aria-pressed="false" data-filter="creatures">Creatures</button>
           <button class="filter-button" aria-pressed="false" data-filter="mechanisms">Mechanisms</button>
           <button class="filter-button" aria-pressed="false" data-filter="furniture">Furniture</button>
-          <button class="filter-button is-active" aria-pressed="true" data-filter="all">All</button>
           <button class="filter-button" aria-pressed="false" data-filter="available">Available</button>
-          <button class="filter-button" aria-pressed="false" data-filter="in-workshop">In workshop</button>
           <button class="filter-button" aria-pressed="false" data-filter="concept">Ideas &amp; concepts</button>
           <button class="filter-button" aria-pressed="false" data-filter="found-a-home">Found a home</button>
         </div>
       </div>
+      <p id="archive-results" class="archive-results" role="status"></p>
       <div id="archive-grid" class="piece-grid"></div>
     </section>
 
@@ -151,7 +151,7 @@
         <div>
           <p class="eyebrow">Start a conversation</p>
           <h2>Have something in mind?</h2>
-          <p>Have a furniture restoration or prop idea? Tell me what you imagine and we can discuss whether it is a fit. Experimental concepts shown in the archive are not necessarily commission-ready.</p>
+          <p>I welcome inquiries about furniture restoration and custom props. Tell me what you have in mind, where you’re located, and any timing or budget you’re working with. I’ll let you know if the project fits the workshop.</p>
           <div class="finish-list" id="finish-list"></div>
         </div>
         <form name="commission" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="studio-form">
@@ -161,9 +161,9 @@
           <label>Email<input type="email" name="email" autocomplete="email" required></label>
           <label>Location<input name="location" placeholder="Town or region"></label>
           <label>Build type<input name="build-type" placeholder="Furniture, prop, cosplay piece, mechanism..."></label>
-          <label>Approximate budget (optional)<select name="budget"><option value="">Choose one</option><option>Not sure yet</option><option>Under $250</option><option>$250–$500</option><option>$500–$900</option><option>$900+</option></select></label>
+          <label>Approximate budget in CAD (optional)<select name="budget"><option value="">Choose one</option><option>Not sure yet</option><option>Under $250</option><option>$250–$500</option><option>$500–$900</option><option>$900+</option></select></label>
           <label>Tell me about the idea<textarea name="message" rows="5" required></textarea></label>
-          <button class="button button-primary" type="submit">Begin the conversation</button>
+          <button class="button button-primary" type="submit">Send an inquiry</button>
         </form>
       </div>
     </section>
@@ -179,17 +179,18 @@
     <div class="section-shell footer-inner">
       <p>© <span id="year"></span> Root & Render Studio</p>
       <p>Made in Ontario, one strange object at a time.</p>
+      <a href="#workbench">Maker tools</a>
     </div>
   </footer>
 
-  <dialog id="piece-dialog" class="piece-dialog">
+  <dialog id="piece-dialog" aria-labelledby="piece-title" class="piece-dialog">
     <button class="dialog-close" aria-label="Close">×</button>
     <div id="dialog-content"></div>
   </dialog>
 
-  <dialog id="reserve-dialog" class="piece-dialog small-dialog">
+  <dialog id="reserve-dialog" aria-labelledby="reserve-title" class="piece-dialog small-dialog">
     <button class="dialog-close" aria-label="Close">×</button>
-    <h2>Reserve this piece</h2>
+    <h2 id="reserve-title">Reserve this piece</h2>
     <form name="reservation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="studio-form">
       <input type="hidden" name="form-name" value="reservation">
       <input type="hidden" id="reservation-piece" name="piece">
