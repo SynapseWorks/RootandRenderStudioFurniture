@@ -311,6 +311,327 @@
       "image": "",
       "gallery": [],
       "featured": false
+    },
+    {
+      "id": "COS-001",
+      "title": "Scrapyard Freddy Mk I",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Cosplay / animatronic puppet",
+      "theme": "Cosplay / animatronic puppet",
+      "status": "in-workshop",
+      "statusLabel": "Active build",
+      "price": null,
+      "progress": 28,
+      "summary": "An active, distressed animatronic-style wearable puppet build with hand-operated mechanisms and a modular fitted chassis.",
+      "story": "An oversized, scrap-built Freddy character that explores mechanical puppetry, expressive eyes and jaw movement. Previously recorded as Nightmare Freddy; the historical project and fitted harness records are preserved.",
+      "dimensions": "To measure",
+      "materials": "Wearable backplate, structural supports, mechanical linkages, bungee cord, sculptural shell and weathered finishes (final inventory to verify)",
+      "version": "0.1",
+      "physicalInstance": "Mk I",
+      "armouryId": "NF-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=NF-001",
+      "buildNotes": "Active build. Eye and jaw linkage and arm controls have been prototyped; verify current construction and safety testing before declaring complete.",
+      "buildSteps": [
+        "Existing wearable backplate and structural support",
+        "Puppet arm control",
+        "Turnable eye control using inverted baby-scooter handle",
+        "Bungee-linked jaw movement",
+        "Planned foam exterior and final wear testing"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "active",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-002",
+      "title": "Siren Head",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Creature cosplay / giant puppet",
+      "theme": "Creature cosplay / giant puppet",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "Future oversized creature fabrication concept exploring silhouette, height, sound and practical puppetry.",
+      "story": "A future creature-design project inspired by the unnerving proportions of Siren Head. No physical construction is recorded yet.",
+      "dimensions": "To measure",
+      "materials": "Tentative: lightweight armature, foam, fabric, weathering paint, optional low-volume audio",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "SH-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=SH-001",
+      "buildNotes": "Future concept only, not an active fabricated build.",
+      "buildSteps": [
+        "Lightweight wearable frame concept",
+        "Oversized head and siren silhouette",
+        "Safe visibility, ventilation and quick release",
+        "Transportable modular structure"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-003",
+      "title": "Costs of Perception",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Original performance-horror cosplay",
+      "theme": "Original performance-horror cosplay",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 8,
+      "summary": "A layered wearable illusion: a graceful doll, a hidden fearful performer, and a looming shadow-cloud whose motions echo the doll.",
+      "story": "An original study in concealment and perception, combining a front doll puppet, a concealed middle layer and a dark grinning silhouette behind. Designed for staged, unsettling movement.",
+      "dimensions": "To measure",
+      "materials": "Tentative: lightweight doll shell, concealed harness, fabric, shadow armature, puppetry linkages and optional LEDs",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "COP-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=COP-001",
+      "buildNotes": "Original concept; no physical build started.",
+      "buildSteps": [
+        "Doll-to-shadow motion transfer",
+        "Hidden-performer sightlines",
+        "Ventilation and quick release",
+        "Shadow-cloud silhouette testing"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-004",
+      "title": "Withered Bonnie",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Animatronic cosplay",
+      "theme": "Animatronic cosplay",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 4,
+      "summary": "A future distressed animatronic costume using lessons from the modular puppet and harness platform.",
+      "story": "A character build retained as a design placeholder. Form, mechanisms and construction approach remain exploratory.",
+      "dimensions": "To measure",
+      "materials": "To determine: harness, foam shell, joint mechanisms, finishes",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "WB-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=WB-001",
+      "buildNotes": "Preserve existing Armoury placeholder and progress.",
+      "buildSteps": [
+        "Owner-fitted harness",
+        "Shoulder architecture",
+        "Arm mechanism",
+        "Head and jaw system"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-005",
+      "title": "Withered Chica",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Animatronic cosplay",
+      "theme": "Animatronic cosplay",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "A possible future damaged-animatronic character build, pending design and materials research.",
+      "story": "An earlier cosplay direction to explore after the current Freddy prototype. This entry is a concept, not a claim of construction.",
+      "dimensions": "To measure",
+      "materials": "Not selected",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "WC-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=WC-001",
+      "buildNotes": "Idea placeholder only.",
+      "buildSteps": [
+        "Character silhouette and sizing",
+        "Harness compatibility assessment",
+        "Head and jaw expression concept"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-006",
+      "title": "Glamrock Chica",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Animatronic cosplay",
+      "theme": "Animatronic cosplay",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "An earlier potential glossy, expressive animatronic costume direction.",
+      "story": "Exploratory character concept. Any future build would require its own character proportions, costume comfort and mechanism decisions.",
+      "dimensions": "To measure",
+      "materials": "Not selected",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "GC-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=GC-001",
+      "buildNotes": "Idea placeholder only; no fabricated work recorded.",
+      "buildSteps": [
+        "Character reference and scale study",
+        "Materials and finish samples",
+        "Wearable frame assessment"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-007",
+      "title": "Aurelia Armour",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Original wearable armour",
+      "theme": "Original wearable armour",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "An early named armour-design concept for future wearable fabrication.",
+      "story": "Aurelia is recorded as a named armour concept. Styling and story are intentionally left open until the design is developed.",
+      "dimensions": "To measure",
+      "materials": "Not selected",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "AU-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=AU-001",
+      "buildNotes": "Name-only concept. Do not infer completed components.",
+      "buildSteps": [
+        "Concept sketches",
+        "Sizing and fit plan",
+        "Mobility and fastening tests"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-008",
+      "title": "Bloom Armour",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Original wearable armour",
+      "theme": "Original wearable armour",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "An exploratory wearable armour direction with design details still to be defined.",
+      "story": "Bloom is saved as a future original armour concept. No specific appearance or build techniques have been confirmed.",
+      "dimensions": "To measure",
+      "materials": "Not selected",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "BL-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=BL-001",
+      "buildNotes": "Name-only concept.",
+      "buildSteps": [
+        "Define visual language",
+        "Choose fabrication approach",
+        "Prototype fitting and movement"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "id": "COS-009",
+      "title": "Monster Chassis Mk I",
+      "collection": "Cosplay, Creatures & Props",
+      "objectType": "Modular creature rig",
+      "theme": "Modular creature rig",
+      "status": "planned",
+      "statusLabel": "Concept · not yet built",
+      "price": null,
+      "progress": 0,
+      "summary": "Reusable modular wearable puppetry platform for large creature and animatronic builds.",
+      "story": "A flexible chassis concept intended to support future creatures using interchangeable mechanical systems, fit-tested per wearer.",
+      "dimensions": "To measure",
+      "materials": "Structural supports, fittings, connectors, padding; final specification pending",
+      "version": "0.1",
+      "physicalInstance": "Not assigned",
+      "armouryId": "MC-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=MC-001",
+      "buildNotes": "Platform concept; keep Emerson's existing E-HAR-001 component as its own separate physical record.",
+      "buildSteps": [
+        "Modular connector specification",
+        "Harness fit and load transfer",
+        "Interchangeable arm and head interfaces",
+        "Wear-test and safety documentation"
+      ],
+      "versions": [
+        {
+          "version": "0.1",
+          "status": "concept",
+          "notes": "Initial cross-linked portfolio archive entry."
+        }
+      ],
+      "image": "",
+      "gallery": [],
+      "featured": false
     }
   ]
 }
