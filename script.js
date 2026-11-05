@@ -24,9 +24,9 @@ function cardTemplate(piece){
  </article>`;
 }
 function render(){
- const workshop=state.pieces.filter(p=>['in-workshop','planned'].includes(p.status));
+ const workshop=state.pieces.filter(p=>p.status==='in-workshop'||(p.status==='planned'&&!p.collection));
  workshopGrid.innerHTML=workshop.length?workshop.map(cardTemplate).join(''):'<p class="empty-state">No pieces are currently in the workshop. The next rescue is still waiting to be found.</p>';
- const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>state.filter==='staffs'?isStaff(p):state.filter==='furniture'?!isStaff(p):p.status===state.filter);
+ const visible=state.filter==='all'?state.pieces:state.pieces.filter(p=>state.filter==='staffs'?isStaff(p):state.filter==='furniture'?!p.collection:state.filter==='cosplay'?p.collection==='Cosplay, Creatures & Props':p.status===state.filter);
  archiveGrid.innerHTML=visible.length?visible.map(cardTemplate).join(''):'<p class="empty-state">No pieces in this part of the archive yet.</p>';
  document.querySelector('#workshop-count').textContent=workshop.length?`${workshop.length} ${workshop.length===1?'object is':'objects are'} currently awakening in the workshop.`:'The workshop is quiet—for now.';
  bindCards();
@@ -48,6 +48,7 @@ function showPiece(id){
  ${beforeAfterTemplate(piece)}${timelineTemplate(piece)}${galleryTemplate(piece)}
  <div class="dialog-details"><div><small>Status</small>${escapeHtml(piece.statusLabel)}</div><div><small>Dimensions</small>${escapeHtml(piece.dimensions||'To be measured')}</div><div><small>${isStaff(piece)?"Design version":"Price"}</small>${isStaff(piece)?escapeHtml(`v${piece.version||"0.1"}`):formatPrice(piece.price)}</div></div>
  <p class="dialog-story"><strong>Materials:</strong> ${escapeHtml(piece.materials||'Details coming soon')}</p>${isStaff(piece)?`<p class="dialog-story"><strong>Branch:</strong> ${escapeHtml(piece.branchType||"To choose")} · <strong>Instance:</strong> ${escapeHtml(piece.physicalInstance||"Not assigned")}</p><p class="dialog-story"><strong>Workshop notes:</strong> ${escapeHtml(piece.buildNotes||"")}</p>${Array.isArray(piece.versions)?`<h3>Version history</h3><div class="story-timeline">${piece.versions.map(v=>`<article><strong>v${escapeHtml(v.version)}</strong> · ${escapeHtml(v.status)}<p>${escapeHtml(v.notes)}</p></article>`).join("")}</div>`:""}${Array.isArray(piece.buildSteps)?`<h3>Proposed build steps</h3><ol>${piece.buildSteps.map(step=>`<li>${escapeHtml(step)}</li>`).join("")}</ol>`:""}`:""}
+ ${piece.armouryUrl?`<p class="dialog-story"><a href="${escapeHtml(piece.armouryUrl)}" target="_blank" rel="noopener noreferrer">View technical record in Armoury ↗</a></p>`:""}
  ${piece.status==='available'?`<button class="button button-primary reserve-button" data-reserve="${escapeHtml(piece.id)}">Reserve this piece</button>`:''}</div>`;
  pieceDialog.showModal();
  const range=dialogContent.querySelector('[data-before-after] input');if(range)range.addEventListener('input',event=>event.currentTarget.closest('[data-before-after]').style.setProperty('--position',`${event.currentTarget.value}%`));
