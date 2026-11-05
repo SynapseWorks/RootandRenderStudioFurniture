@@ -65,7 +65,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-001",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-001"
     },
     {
       "id": "STF-002",
@@ -100,7 +102,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-002",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-002"
     },
     {
       "id": "STF-003",
@@ -135,7 +139,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-003",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-003"
     },
     {
       "id": "STF-004",
@@ -170,7 +176,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-004",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-004"
     },
     {
       "id": "STF-005",
@@ -205,7 +213,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-005",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-005"
     },
     {
       "id": "STF-006",
@@ -240,7 +250,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-006",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-006"
     },
     {
       "id": "STF-007",
@@ -275,7 +287,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-007",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-007"
     },
     {
       "id": "STF-008",
@@ -310,7 +324,9 @@
       ],
       "image": "",
       "gallery": [],
-      "featured": false
+      "featured": false,
+      "armouryId": "STF-008",
+      "armouryUrl": "https://thecosplayarmoury.netlify.app/?project=STF-008"
     },
     {
       "id": "COS-001",
