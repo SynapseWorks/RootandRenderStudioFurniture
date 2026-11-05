@@ -12,10 +12,10 @@ logo_url: "https://rootandrenderstudiofurniture.netlify.app/favicon.svg"
 
 collections:
   - name: "collection"
-    label: "Furniture Collection"
+    label: "Objects Collection"
     files:
       - name: "pieces"
-        label: "Furniture Pieces"
+        label: "Objects and Artifacts"
         file: "data/pieces.json"
         fields:
           - label: "Pieces"
@@ -26,6 +26,25 @@ collections:
               - { label: "Piece number", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Theme", name: "theme", widget: "string" }
+              - { label: "Collection", name: "collection", widget: "string", required: false }
+              - { label: "Object type", name: "objectType", widget: "string", required: false }
+              - { label: "Branch shape", name: "branchType", widget: "string", required: false }
+              - { label: "Design version", name: "version", widget: "string", required: false }
+              - { label: "Physical instance ID", name: "physicalInstance", widget: "string", required: false }
+              - { label: "Workshop notes", name: "buildNotes", widget: "text", required: false }
+              - label: "Build steps"
+                name: "buildSteps"
+                widget: "list"
+                required: false
+                field: { label: "Step", name: "step", widget: "string" }
+              - label: "Version history"
+                name: "versions"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Version", name: "version", widget: "string" }
+                  - { label: "Stage", name: "status", widget: "string" }
+                  - { label: "Notes", name: "notes", widget: "text" }
               - label: "Status"
                 name: "status"
                 widget: "select"
